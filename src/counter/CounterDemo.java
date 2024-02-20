@@ -39,6 +39,5 @@ public class CounterDemo {
         }
 
         System.out.println(counter.getCounter());
-
     }
 }
