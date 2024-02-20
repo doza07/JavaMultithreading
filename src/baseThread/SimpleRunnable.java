@@ -1,3 +1,5 @@
+package baseThread;
+
 public class SimpleRunnable implements Runnable{
 
     @Override

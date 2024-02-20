@@ -1,3 +1,5 @@
+package baseThread;
+
 public class SimpleThread extends Thread {
 
     @Override
