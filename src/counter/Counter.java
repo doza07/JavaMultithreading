@@ -1,14 +1,25 @@
 package counter;
 
 public class Counter {
+
+    public static String description;
     private int count;
 
-    public void increment() {
+    public static void init() {
+        synchronized (Counter.class) {
+            if (description == null)
+                description = "Counter description";
+        }
+    }
+
+    public synchronized void increment() {
         count++;
     }
 
     public void decrement() {
-        count--;
+        synchronized (this) {
+            count--;
+        }
     }
 
     public int getCounter() {
